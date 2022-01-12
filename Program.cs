@@ -6,7 +6,6 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Reflection;
-using System.Text.RegularExpressions;
 
 namespace MyApp
 {
@@ -36,7 +35,6 @@ namespace MyApp
         protected PropertyInfo[] myPropertyInfo = null;
         protected string values = string.Empty;
         protected string propertyNames = string.Empty;
-        protected Regex r = null;
         protected string value = string.Empty;
         protected SqlDataReader sqlDataReader = null;
         protected string command = string.Empty;
@@ -428,6 +426,11 @@ namespace MyApp
                                 {
                                     Console.WriteLine("Enter product's name:");
                                     string name = Console.ReadLine();
+                                    NameChecker nameChecker = new NameChecker();
+                                    if (nameChecker.CheckName(name) > 0)
+                                    {
+                                        throw new ProductAlreadyExists(name);
+                                    }
                                     Console.WriteLine("Enter payment for one day of using:");
                                     string payPerDay = Console.ReadLine();
                                     Console.WriteLine("Enter daily penalty:");
