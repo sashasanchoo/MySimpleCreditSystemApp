@@ -59,8 +59,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill.cs" />
+    <Compile Include="CustomDateKeeper.cs" />
+    <Compile Include="DataAdapterForSQL.cs" />
+    <Compile Include="DataDeleter.cs" />
+    <Compile Include="DataOperations.cs" />
+    <Compile Include="DataReader.cs" />
+    <Compile Include="DataWriter.cs" />
+    <Compile Include="DateChecker.cs" />
+    <Compile Include="DateSetter.cs" />
+    <Compile Include="MonthsDifferenceAccountant.cs" />
+    <Compile Include="NameChecker.cs" />
+    <Compile Include="NotValidValue.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentChecker.cs" />
+    <Compile Include="PenaltyDaysAccountant.cs" />
+    <Compile Include="ProductAlreadyExists.cs" />
+    <Compile Include="ProductDoesntExist.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WrongData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
